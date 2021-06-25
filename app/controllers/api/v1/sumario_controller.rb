@@ -21,6 +21,6 @@ class Api::V1::SumarioController < ApplicationController
           empsrs: empsrs
         }
       end
-      render json: list
+      render json: list.sort_by { |hash| [hash[:companhia], hash[:fundador], hash[:totalfunc]].to_s}
     end
   end
