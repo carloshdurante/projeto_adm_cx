@@ -3,7 +3,7 @@ class CreateCompanies < ActiveRecord::Migration[6.1]
     create_table :companies do |t|
       t.string :nome
       t.integer :cnpj, limit: 14
-      t.string :fundacao
+      t.date :fundacao
       t.references :fundador, null: false, foreign_key: true
 
       t.timestamps
