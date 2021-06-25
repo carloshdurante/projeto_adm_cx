@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_06_24_043657) do
   create_table "companies", force: :cascade do |t|
     t.string "nome"
     t.integer "cnpj", limit: 14
-    t.string "fundacao"
+    t.date "fundacao"
     t.integer "fundador_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
