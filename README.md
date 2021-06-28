@@ -109,7 +109,7 @@ curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `POST /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+| `PUT /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
@@ -122,7 +122,7 @@ curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `DELETE /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
+| `DEL /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
 
 ```bash
 curl --location --request DELETE 'localhost:3000/api/v1/fundador/1/'
