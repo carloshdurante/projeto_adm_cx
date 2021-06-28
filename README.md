@@ -78,13 +78,10 @@ O desafio proposto foi construir uma aplicação para cadastro de funcionários 
 
 ## Fundador
 
-`POST Cadastrar fundador`
-
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
 | `POST /api/v1/fundador`                  | Cadastrar um novo fundador.                |
 
-**curl**
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/fundador' \
 --data-raw '{
@@ -98,7 +95,6 @@ curl --location --request POST 'localhost:3000/api/v1/fundador' \
 | -----------------------------------------| ------------------------------------------ |
 | `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
 
-**curl**
 ```bash
 curl --location --request GET 'localhost:3000/api/v1/fundador'
 ```
@@ -107,7 +103,6 @@ curl --location --request GET 'localhost:3000/api/v1/fundador'
 | -----------------------------------------| ------------------------------------------ |
 | `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
 
-**curl**
 ```bash
 curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
 ```
@@ -116,7 +111,6 @@ curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
 | -----------------------------------------| ------------------------------------------ |
 | `POST /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
 
-**curl**
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
 --data-raw '{
@@ -130,7 +124,6 @@ curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
 | -----------------------------------------| ------------------------------------------ |
 | `DELETE /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
 
-**curl**
 ```bash
 curl --location --request DELETE 'localhost:3000/api/v1/fundador/1/'
 ```
