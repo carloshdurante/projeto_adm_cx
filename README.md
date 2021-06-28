@@ -1,6 +1,6 @@
 # CargoX Coding Challenge - Projeto ADM
 
-## Para desenvolvimento da API utilizei as tecnologias abaixo:
+## Para desenvolvimento da API utilizei as depências abaixo:
 
 <table>
   <tr>
@@ -74,3 +74,26 @@ O desafio proposto foi construir uma aplicação para cadastro de funcionários 
             |                      |   |                      |
             +----------------------+   +----------------------+
 ```
+## Rotas e exemplo de curl
+
+### Fundador
+
+`POST Cadastrar fundador`
+
+| Rota                                     | Uso                                       |
+| -----------------------------------------| ----------------------------------------- |
+| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.               |
+**curl**
+```bash
+curl --location --request POST 'localhost:3000/api/v1/fundador' \
+--data-raw '{
+    "nome": "Carlos",
+    "sobrenome": "Durante",
+    "idade": 27
+}'
+```
+
+| `GET /api/v1/fundador`                    | Listar todos os fundadores.               |
+| `GET /api/v1/fundador/:fundador_id`       | Exibir detalhes de um fundador.           |
+| `POST /api/v1/fundador/:fundador_id`      | Editar detalhes de um fundador.           |
+| `DELETE /api/v1/fundador/:fundador_id`    | Deletar um fundador.                      |
