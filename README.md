@@ -1,6 +1,6 @@
 # CargoX Coding Challenge - Projeto ADM
 
-## Para desenvolvimento da API utilizei as depências abaixo:
+## Para desenvolvimento da API utilizei as depêndencias abaixo:
 
 <table>
   <tr>
