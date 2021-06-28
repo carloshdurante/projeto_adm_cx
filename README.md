@@ -18,7 +18,7 @@
   <tr>
     <td>Database</td>
     <td>
-      SQLite3 (dev)
+      SQLite3
     </td>
   </tr>
 </table>
