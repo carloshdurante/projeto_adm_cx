@@ -80,9 +80,9 @@ O desafio proposto foi construir uma aplicação para cadastro de funcionários 
 
 `POST Cadastrar fundador`
 
-| Rota                                     | Uso                                       |
-| -----------------------------------------| ----------------------------------------- |
-| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.               |
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.                |
 
 **curl**
 ```bash
@@ -94,7 +94,43 @@ curl --location --request POST 'localhost:3000/api/v1/fundador' \
 }'
 ```
 
-| `GET /api/v1/fundador`                    | Listar todos os fundadores.               |
-| `GET /api/v1/fundador/:fundador_id`       | Exibir detalhes de um fundador.           |
-| `POST /api/v1/fundador/:fundador_id`      | Editar detalhes de um fundador.           |
-| `DELETE /api/v1/fundador/:fundador_id`    | Deletar um fundador.                      |
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
+
+**curl**
+```bash
+curl --location --request GET 'localhost:3000/api/v1/fundador'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
+
+**curl**
+```bash
+curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+
+**curl**
+```bash
+curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
+--data-raw '{
+    "nome": "Henrique",
+    "sobrenome": "Silva",
+    "idade": 22
+}'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `DELETE /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
+
+**curl**
+```bash
+curl --location --request DELETE 'localhost:3000/api/v1/fundador/1/'
+```
