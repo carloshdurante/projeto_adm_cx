@@ -413,6 +413,7 @@ curl --location --request GET 'localhost:3000/api/v1/sumario'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/contratacao' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "verificacao": {
         "nivel": "sr"
