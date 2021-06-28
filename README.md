@@ -23,7 +23,7 @@
   </tr>
 </table>
 
-O desafio proposto foi construir uma aplicação para cadastro de funcionários de casa empresa da qual pertence ao conglomerado CargoX Corp.
+O desafio proposto foi construir uma aplicação para cadastro de funcionários de cada empresa da qual pertence ao conglomerado CargoX Corp.
 
 ### As tarefas foram construir uma API utilizando JSON API para que seja possível criar, consultar, alterar e remover (CRUD) os recursos:
 - Company
