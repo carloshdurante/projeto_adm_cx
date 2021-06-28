@@ -84,6 +84,7 @@ O desafio proposto foi construir uma aplicação para cadastro de funcionários 
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/fundador' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Carlos",
     "sobrenome": "Durante",
@@ -105,6 +106,7 @@ curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Henrique",
     "sobrenome": "Silva",
@@ -128,6 +130,7 @@ curl --location --request DELETE 'localhost:3000/api/v1/fundador/1/'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/company' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "CargoX",
     "cnpj": "01234567890123",
@@ -150,6 +153,7 @@ curl --location --request GET 'localhost:3000/api/v1/company/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/company/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Fretebras",
     "cnpj": "01234567890115",
@@ -174,6 +178,7 @@ curl --location --request DELETE 'localhost:3000/api/v1/company/1/'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/lider' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Carlos",
     "sobrenome": "Durante",
@@ -197,6 +202,7 @@ curl --location --request GET 'localhost:3000/api/v1/lider/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/lider/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Carlos",
     "sobrenome": "Silva",
@@ -222,6 +228,7 @@ curl --location --request DELETE 'localhost:3000/api/v1/lider/1/'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/coordenador' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Luan",
     "sobrenome": "Mendieta",
@@ -246,6 +253,7 @@ curl --location --request GET 'localhost:3000/api/v1/coordenador/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/coordenador/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Luan",
     "sobrenome": "Mendieta",
@@ -272,6 +280,7 @@ curl --location --request DELETE 'localhost:3000/api/v1/coordenador/1/'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/empjr' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Thiago",
     "sobrenome": "Silva",
@@ -297,6 +306,7 @@ curl --location --request GET 'localhost:3000/api/v1/empjr/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/empjr/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Thiago",
     "sobrenome": "Brito",
@@ -324,6 +334,7 @@ curl --location --request DELETE 'localhost:3000/api/v1/empjr/1/'
 
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/empsr' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Thiago",
     "sobrenome": "Silva",
@@ -349,6 +360,7 @@ curl --location --request GET 'localhost:3000/api/v1/empsr/1/'
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/empsr/1/' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "nome": "Thiago",
     "sobrenome": "Brito",
