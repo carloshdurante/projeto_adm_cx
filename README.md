@@ -93,14 +93,6 @@ curl --location --request POST 'localhost:3000/api/v1/fundador' \
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
-
-```bash
-curl --location --request GET 'localhost:3000/api/v1/fundador'
-```
-
-| Rota                                     | Uso                                        |
-| -----------------------------------------| ------------------------------------------ |
 | `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
 
 ```bash
@@ -109,7 +101,7 @@ curl --location --request GET 'localhost:3000/api/v1/fundador/1/'
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `PUT /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+| `PUT /api/v1/fundador/:fundador_id`      | Editar detalhes de um fundador.            |
 
 ```bash
 curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
@@ -122,8 +114,188 @@ curl --location --request PUT 'localhost:3000/api/v1/fundador/1/' \
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `DEL /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
+| `DEL /api/v1/fundador/:fundador_id`      | Deletar um fundador.                       |
 
 ```bash
 curl --location --request DELETE 'localhost:3000/api/v1/fundador/1/'
 ```
+
+## Company
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/company`                   | Cadastrar uma nova companhia.              |
+
+```bash
+curl --location --request POST 'localhost:3000/api/v1/company' \
+--data-raw '{
+    "nome": "CargoX",
+    "cnpj": "01234567890123",
+    "fundacao": "2021-06-27",
+    "fundador_id": 2
+}'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/company/:company_id`        | Exibir detalhes de uma companhia.          |
+
+```bash
+curl --location --request GET 'localhost:3000/api/v1/company/1/'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `PUT /api/v1/company/:company_id`        | Editar detalhes de uma companhia.          |
+
+```bash
+curl --location --request PUT 'localhost:3000/api/v1/company/1/' \
+--data-raw '{
+    "nome": "Fretebras",
+    "cnpj": "01234567890115",
+    "fundacao": "2021-06-27",
+    "fundador_id": 2
+}'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `DEL /api/v1/company/:company_id`        | Deletar uma companhia.                     |
+
+```bash
+curl --location --request DELETE 'localhost:3000/api/v1/company/1/'
+```
+
+## Lider
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/lider`                     | Cadastrar um novo líder.                   |
+
+```bash
+curl --location --request POST 'localhost:3000/api/v1/lider' \
+--data-raw '{
+    "nome": "Carlos",
+    "sobrenome": "Durante",
+    "idade": 27,
+    "area": "Cadastro",
+    "company_id": 2
+}'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/lider/:lider_id`            | Exibir detalhes de um líder.               |
+
+```bash
+curl --location --request GET 'localhost:3000/api/v1/lider/1/'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `PUT /api/v1/lider/:lider_id`            | Editar detalhes de um líder.               |
+
+```bash
+curl --location --request PUT 'localhost:3000/api/v1/lider/1/' \
+--data-raw '{
+    "nome": "Carlos",
+    "sobrenome": "Silva",
+    "idade": 27,
+    "area": "Cadastro",
+    "company_id": 2
+}'
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `DEL /api/v1/lider/:lider_id`            | Deletar um líder.                          |
+
+```bash
+curl --location --request DELETE 'localhost:3000/api/v1/lider/1/'
+```
+
+## Coordenador
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.                |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `PUT /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `DEL /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
+
+```bash
+
+```
+
+## Empjr
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.                |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `PUT /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+
+```bash
+
+```
+
+| Rota                                     | Uso                                        |
+| -----------------------------------------| ------------------------------------------ |
+| `DEL /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
+
+```bash
+
+```
+
+## Empsr
