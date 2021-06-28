@@ -218,42 +218,50 @@ curl --location --request DELETE 'localhost:3000/api/v1/lider/1/'
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `POST /api/v1/fundador`                  | Cadastrar um novo fundador.                |
+| `POST /api/v1/coordenador`               | Cadastrar um novo coordenador.             |
 
 ```bash
-
+curl --location --request POST 'localhost:3000/api/v1/coordenador' \
+--data-raw '{
+    "nome": "Luan",
+    "sobrenome": "Mendieta",
+    "idade": "30",
+    "contratadoem": "2021-06-01",
+    "lider_id": 2,
+    "company_id": 2
+}'
 ```
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `GET /api/v1/fundador`                   | Listar todos os fundadores.                |
+| `GET /api/v1/coordenador/:coordenador_id`| Exibir detalhes de um coordenador.         |
 
 ```bash
-
+curl --location --request GET 'localhost:3000/api/v1/coordenador/1/'
 ```
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `GET /api/v1/fundador/:fundador_id`      | Exibir detalhes de um fundador.            |
+| `PUT /api/v1/coordenador/:coordenador_id`| Editar detalhes de um coordenador.         |
 
 ```bash
-
+curl --location --request PUT 'localhost:3000/api/v1/coordenador/1/' \
+--data-raw '{
+    "nome": "Luan",
+    "sobrenome": "Mendieta",
+    "idade": "32",
+    "contratadoem": "2021-06-01",
+    "lider_id": 2,
+    "company_id": 2
+}'
 ```
 
 | Rota                                     | Uso                                        |
 | -----------------------------------------| ------------------------------------------ |
-| `PUT /api/v1/fundador/:fundador_id`     | Editar detalhes de um fundador.            |
+| `DEL /api/v1/coordenador/:coordenador_id`| Deletar um coordenador.                    |
 
 ```bash
-
-```
-
-| Rota                                     | Uso                                        |
-| -----------------------------------------| ------------------------------------------ |
-| `DEL /api/v1/fundador/:fundador_id`   | Deletar um fundador.                       |
-
-```bash
-
+curl --location --request DELETE 'localhost:3000/api/v1/coordenador/1/'
 ```
 
 ## Empjr
