@@ -76,13 +76,14 @@ O desafio proposto foi construir uma aplicação para cadastro de funcionários 
 ```
 ## Rotas e exemplo de curl
 
-### Fundador
+## Fundador
 
 `POST Cadastrar fundador`
 
 | Rota                                     | Uso                                       |
 | -----------------------------------------| ----------------------------------------- |
 | `POST /api/v1/fundador`                  | Cadastrar um novo fundador.               |
+
 **curl**
 ```bash
 curl --location --request POST 'localhost:3000/api/v1/fundador' \
