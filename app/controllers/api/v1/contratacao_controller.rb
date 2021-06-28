@@ -7,21 +7,6 @@ class Api::V1::ContratacaoController < ApplicationController
             if contratacao.save
                 render json: {
                     status: 'Sucesso',
-                    message: 'Líder Criado',
-                    data:contratacao
-                }, status: :ok
-            else
-                render json: {
-                    status: 'Erro',
-                    message: 'Líder não criado',
-                    data: contratacao.errors
-                },  status: :unprocessable_entity
-            end
-        elsif params_verificao[:nivel] == 'sr'
-            contratacao = Empjr.new(contratacao_params)
-            if contratacao.save
-                render json: {
-                    status: 'Sucesso',
                     message: 'Empregado JR Criado',
                     data:contratacao
                 }, status: :ok
@@ -29,6 +14,21 @@ class Api::V1::ContratacaoController < ApplicationController
                 render json: {
                     status: 'Erro',
                     message: 'Empregado JR não criado',
+                    data: contratacao.errors
+                },  status: :unprocessable_entity
+            end
+        elsif params_verificao[:nivel] == 'sr'
+            contratacao = Empsr.new(contratacao_params)
+            if contratacao.save
+                render json: {
+                    status: 'Sucesso',
+                    message: 'Empregado SR Criado',
+                    data:contratacao
+                }, status: :ok
+            else
+                render json: {
+                    status: 'Erro',
+                    message: 'Empregado SR não criado',
                     data: empjr.errors
                 },  status: :unprocessable_entity
             end
